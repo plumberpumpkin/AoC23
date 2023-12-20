@@ -13,6 +13,9 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+.input-text-area{
+  min-width: 50%;
+}
 
 .container {
   margin: 0;
@@ -53,6 +56,7 @@ a:hover {
 h1 {
   text-align: center;
 }
+
 
 input,
 button {

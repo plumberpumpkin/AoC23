@@ -2,9 +2,12 @@
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
 mod puzzle1;
+mod puzzle2;
+
 use crate::puzzle1::puzzle1;
 use crate::puzzle1::puzzle1advanced;
-
+use crate::puzzle2::puzzle2;
+use crate::puzzle2::puzzle2advanced;
 
 // Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
 #[tauri::command]
@@ -14,7 +17,13 @@ fn greet(name: &str) -> String {
 
 fn main() {
     tauri::Builder::default()
-        .invoke_handler(tauri::generate_handler![greet, puzzle1, puzzle1advanced])
+        .invoke_handler(tauri::generate_handler![
+            greet,
+            puzzle1,
+            puzzle1advanced,
+            puzzle2,
+            puzzle2advanced
+        ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }
