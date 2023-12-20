@@ -1,11 +1,11 @@
-use std::fs::File;
+
 
 #[tauri::command]
 pub fn puzzle2(input: String, blue_cubes: u8, red_cubes: u8, green_cubes: u8) -> u16 {
     let mut result: u16 = 0;
     let raw_games: Vec<&str> = input.split("\n").collect();
     //println!("Input is: gc {} , bc {}, rc {}", green_cubes, blue_cubes, red_cubes);
-    let games: Vec<Game> = Vec::new();
+    let _games: Vec<Game> = Vec::new();
     for raw_game in raw_games {
         let colon_index = raw_game.find(":").unwrap();
         let game_id = raw_game[5..colon_index].parse::<u16>().unwrap();
@@ -15,7 +15,7 @@ pub fn puzzle2(input: String, blue_cubes: u8, red_cubes: u8, green_cubes: u8) ->
         for raw_game_set in raw_game_sets {
             let raw_set: Vec<&str> = raw_game_set.split(",").collect();
             let mut set: (u8, u8, u8) = (0, 0, 0);
-            for mut colour in raw_set {
+            for colour in raw_set {
                 if colour.contains("red") {
                     let mut red_count = colour.replace("red", "");
                     red_count = red_count.replace(" ", "");
@@ -54,8 +54,8 @@ pub fn puzzle2(input: String, blue_cubes: u8, red_cubes: u8, green_cubes: u8) ->
 
 #[tauri::command]
 pub fn puzzle2advanced(input: String) {
-    let result: u16 = 0;
-    let raw_games: Vec<&str> = input.split("\n").collect();
+    let _result: u16 = 0;
+    let _raw_games: Vec<&str> = input.split("\n").collect();
 }
 
 struct Game {
