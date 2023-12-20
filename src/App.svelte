@@ -4,6 +4,7 @@
   import Puzzle1Advanced from "./lib/Puzzle1Advanced.svelte";
     import Puzzle2 from "./lib/Puzzle2.svelte";
   import Puzzle2Advanced from "./lib/Puzzle2Advanced.svelte";
+  import Puzzle3 from "./lib/Puzzle3.svelte";
 </script>
 
 <main class="container">
@@ -19,6 +20,10 @@
   <Puzzle2/>
   <div class="row">
     <Puzzle2Advanced/>
+  </div>
+  <h2>Puzzle 3</h2>
+  <div class="row">
+    <Puzzle3/>
   </div>
 
 
