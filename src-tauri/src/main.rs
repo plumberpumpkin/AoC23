@@ -3,6 +3,7 @@
 
 mod puzzle1;
 use crate::puzzle1::puzzle1;
+use crate::puzzle1::puzzle1advanced;
 
 
 // Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
@@ -13,8 +14,7 @@ fn greet(name: &str) -> String {
 
 fn main() {
     tauri::Builder::default()
-        .invoke_handler(tauri::generate_handler![greet])
-        .invoke_handler(tauri::generate_handler![puzzle1])
+        .invoke_handler(tauri::generate_handler![greet, puzzle1, puzzle1advanced])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }

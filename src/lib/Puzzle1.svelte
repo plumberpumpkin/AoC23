@@ -2,7 +2,7 @@
     import {invoke}  from "@tauri-apps/api/tauri";
 
     let input1 = "";
-    let result1 = "";
+    let result1 = "Your answer will appear here";
 
     async function puzzle1(){
         result1 = await invoke("puzzle1", { input: input1 })
