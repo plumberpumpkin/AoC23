@@ -1,10 +1,10 @@
 <script>
-  import Greet from './lib/Greet.svelte'
   import Puzzle1 from "./lib/Puzzle1.svelte";
   import Puzzle1Advanced from "./lib/Puzzle1Advanced.svelte";
     import Puzzle2 from "./lib/Puzzle2.svelte";
   import Puzzle2Advanced from "./lib/Puzzle2Advanced.svelte";
   import Puzzle3 from "./lib/Puzzle3.svelte";
+    import Puzzle4 from "./lib/Puzzle4.svelte";
 </script>
 
 <main class="container">
@@ -25,6 +25,9 @@
   <div class="row">
     <Puzzle3/>
   </div>
-
+  <h2>Puzzle 4</h2>
+  <div class="row">
+    <Puzzle4/>
+  </div>
 
 </main>

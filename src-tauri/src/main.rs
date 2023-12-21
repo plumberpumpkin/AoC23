@@ -11,6 +11,7 @@ use crate::puzzle1::puzzle1advanced;
 use crate::puzzle2::puzzle2;
 use crate::puzzle2::puzzle2advanced;
 use crate::puzzle3::puzzle3;
+use crate::puzzle4::puzzle4;
 
 // Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
 #[tauri::command]
@@ -26,7 +27,8 @@ fn main() {
             puzzle1advanced,
             puzzle2,
             puzzle2advanced,
-            puzzle3
+            puzzle3,
+            puzzle4
         ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");

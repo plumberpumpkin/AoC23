@@ -1,5 +1,3 @@
-
-
 #[tauri::command]
 pub fn puzzle2(input: String, blue_cubes: u32, red_cubes: u32, green_cubes: u32) -> u16 {
     let mut result: u16 = 0;
@@ -28,9 +26,9 @@ pub fn puzzle2advanced(input: String) -> u32 {
     let mut result: u32 = 0;
     let raw_games: Vec<&str> = input.split("\n").collect();
     let games: Vec<Game> = get_games(raw_games);
-    for game in games{
+    for game in games {
         let mut min_ball_sets: (u32, u32, u32) = (0, 0, 0);
-        for set in game.sets{
+        for set in game.sets {
             if set.0 > min_ball_sets.0 {
                 min_ball_sets.0 = set.0;
             }
@@ -41,7 +39,10 @@ pub fn puzzle2advanced(input: String) -> u32 {
                 min_ball_sets.2 = set.2;
             }
         }
-        println!("Game {} has min ball sets: {:?}", game.game_id, min_ball_sets);
+        println!(
+            "Game {} has min ball sets: {:?}",
+            game.game_id, min_ball_sets
+        );
         let set_power = min_ball_sets.0 * min_ball_sets.1 * min_ball_sets.2;
         result += set_power;
         println!("Current result {}", result);
@@ -54,7 +55,7 @@ struct Game {
     sets: Vec<(u32, u32, u32)>,
 }
 
-fn get_games(input: Vec<&str>) -> Vec<Game>{
+fn get_games(input: Vec<&str>) -> Vec<Game> {
     let mut games: Vec<Game> = Vec::new();
     for raw_game in input {
         let colon_index = raw_game.find(":").unwrap();
@@ -88,5 +89,4 @@ fn get_games(input: Vec<&str>) -> Vec<Game>{
         games.push(game);
     }
     return games;
-
 }
