@@ -13,8 +13,8 @@
 
 <div class="row">
     <form on:submit|preventDefault={puzzle4}>
-        <textarea id="puzzle2-input" class="input-text-area"  bind:value={input4}/>
-        <button type="submit">Solve 02.12.</button>
+        <textarea id="puzzle4-input" class="input-text-area"  bind:value={input4}/>
+        <button type="submit">Solve 04.12.</button>
     </form>
 </div>
 <div class="row">
