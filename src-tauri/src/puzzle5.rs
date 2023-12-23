@@ -1,4 +1,2 @@
 #[tauri::command]
-pub fn puzzle5(input: String){
-
-}
+pub fn puzzle5(input: String) {}
