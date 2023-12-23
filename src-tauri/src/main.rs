@@ -8,6 +8,7 @@ mod puzzle4;
 mod puzzle5;
 mod puzzle6;
 mod puzzle7;
+mod puzzle8;
 
 use crate::puzzle1::puzzle1;
 use crate::puzzle1::puzzle1advanced;
@@ -19,6 +20,7 @@ use crate::puzzle5::puzzle5;
 use crate::puzzle6::puzzle6;
 use crate::puzzle6::puzzle6advanced;
 use crate::puzzle7::puzzle7;
+use crate::puzzle8::puzzle8;
 
 // Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
 #[tauri::command]
@@ -39,7 +41,8 @@ fn main() {
             puzzle5,
             puzzle6,
             puzzle6advanced,
-            puzzle7
+            puzzle7,
+            puzzle8
         ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
